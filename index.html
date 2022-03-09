@@ -191,7 +191,6 @@
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABYOTGDZrq4Cja60lUED6Xcd2JTTjB20orvJJnGAuWCmNGuGvK8ulDNK3u3PxfW6_qbrHgWv2SNa48n3eeZ89iCFKWZeOfHkiF8NVXUItgSeRmhyVRfiA925BMId39A.webp?r=421",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABSLqZ91QzNI7tTUAB_V948NFnsrroGJhbFqKKGVnzktGhZcxgyEWFd0R9rH581-UGBiErreVZgP3FfaoH3a8xd_qJY2CkiCCAUnYa1du-wQULsgO6oM6x9Hu5-T29A.webp?r=009",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABZ4Dveeer4ro-SKJyBj8swSKSWEQ70NoXaPet8-AIetDpqgg_dEIuM6VZi3ucuiJ9CJNrvKq5CO--KlRsrE6jcNjLm0Jz0fxD8CHgKYX-I0He7-2o-ioGnL_KgeY7A.webp?r=dab",
-        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABdU3gz_9dhUqAFw6CvlTw4pLfosZxVIt-23GWRKabRnFB5QYP4Kq21TDRMDrB8dZzA4odntIVnGblaYO6dxgr2HqSrJaqIjgCCMRtmevqJFLf4MDFBTW2lgAKjmLWA.webp?r=ce7",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABTrSwa4G5_JPY0w0-1_jeRf6_RFq6K5rKCcrXL50YYqJ7qCH1nlyP6Zp5aRIIRRg-7l5ny2ftfPioX7P6IwI9QhHx_dzap_w4OuOM-xeV_vg60Uo7pA9DWr3GUfkNA.webp?r=144",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABZhNKO_-qI4SJNmwQmXXCTwFeXwCr-jIQsa4plvbkf4XwFHEcTSqJrALym94VDxcf5mMqDGFGnol0GYSUC--E4cBkzyf.webp?r=230",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABTDLFtRID9I7LjqiD3vuztvNUHAVS2YTMLUAL8hD81rAxGbwwnoT5vSpptkOz7SUKkjyy9yIUMKLc2t3q0XwqcF1OEDKuTSO9Z7XqKzsg4-rfj0SZ2pxadjOKWpwNw.webp?r=ceb",
@@ -213,10 +212,12 @@
 
     let main = document.getElementById('main')
     let els = ['Ma liste', 'Série et fantastique', 'Reprendre avec le profil de moi', 'Tendances actuelles']
-    const writeCarr = (els, list, size, hasNumber) => {
+    const writeCarr = (els, imgList, size, hasNumber) => {
 
         for (let el of els) {
-
+            // let list = [...imgList]
+            let list = imgList
+            console.log(list, imgList)
             let sect = document.createElement('section')
             sect.classList.add('w-auto', 'overflow-x-scroll', 'no-scrollbar', 'space-y-2')
 
@@ -227,7 +228,7 @@
             let caroussel = document.createElement('div')
             caroussel.classList.add('flex', 'w-max', 'space-x-2', 'mx-10')
 
-            for (let i = 0; i < 10 && list.length > 0; i++) {
+            for (let i = 0; i < 15 && list.length !== 0; i++) {
 
                 let img = document.createElement('img')
                 img.classList.add("rounded-md", 'cursor-pointer', "h-" + size)
