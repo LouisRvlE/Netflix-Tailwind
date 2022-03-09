@@ -29,6 +29,7 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
+
 </style>
 
 <body class="bg-[#141414] text-white">
@@ -109,13 +110,16 @@
             </main>
         </section>
     </header>
-    <main id="main" class="w-full mt-[-90px] pb-10 z-100 absolute space-y-2">
+    <main id="main" class="w-full mt-[-150px] pb-10 z-100 absolute space-y-2">
         <!-- Voilà à quoi ça ressemble une fois que le js est executé -->
-        <!-- <div class="mx-10 w-auto overflow-x-scroll no-scrollbar space-y-2">
+        <!-- <section class="mx-10 w-auto overflow-x-scroll no-scrollbar space-y-2">
             <h1 class="ml-4 text-2xl font-bold">Ma liste</h1>
             <div class="flex w-max space-x-5 mx-1">
+                <a>
+                    <img class="rounded-md" src="https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABffzr_2cghc17F_25Bc4HE5MfUnNcDngTOsRlicCGzHc1Szf3cpYDCC8ifqfF8-ONSRTFEFNgIVOBTrOvjiLj57al1mtT30bn2kAnfz5M5Hpjs0bGRHGbQCNQTm0.jpg?r=c9a">
+                </a> * 10
             </div>
-        </div> -->
+        </section> -->
     </main>
 </body>
 <script>
@@ -188,12 +192,11 @@
     let main = document.getElementById('main')
     let els = ['Ma liste', 'Série et fantastique', 'Reprendre avec le profil de moi', 'Tendances actuelles']
     for (let el of els) {
-        let div = document.createElement('div')
-        div.classList.add('mx-10')
-        div.classList.add('w-auto')
-        div.classList.add('overflow-x-scroll')
-        div.classList.add('no-scrollbar')
-        div.classList.add('space-y-2')
+        let sect = document.createElement('section')
+        sect.classList.add('w-auto')
+        sect.classList.add('overflow-x-scroll')
+        sect.classList.add('no-scrollbar')
+        sect.classList.add('space-y-2')
         let h1 = document.createElement('h1')
         h1.innerHTML = el
         h1.classList.add('font-bold')
@@ -204,7 +207,7 @@
         caroussel.classList.add('flex')
         caroussel.classList.add('w-max')
         caroussel.classList.add('space-x-2')
-        caroussel.classList.add('mx-1')
+        caroussel.classList.add('mx-10')
         for (let i = 0; i < 10; i++) {
             let img = document.createElement('img')
             img.classList.add("rounded-md")
@@ -216,8 +219,8 @@
             caroussel.appendChild(a)
         }
         main.appendChild(h1)
-        div.appendChild(caroussel)
-        main.appendChild(div)
+        sect.appendChild(caroussel)
+        main.appendChild(sect)
     }
 </script>
 
