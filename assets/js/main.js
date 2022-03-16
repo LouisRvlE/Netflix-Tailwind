@@ -86,6 +86,78 @@ const numberList = [
     '<svg id="rank-10" width="100%" height="100%" viewBox="0 0 140 154" class="svg-icon svg-icon-rank-10 top-10-rank"><path stroke="#595959" stroke-linejoin="square" stroke-width="4" d="M34.757 151.55h35.869V2.976L2 19.687v30.14l32.757-8.41v110.132zm105.53 3.45c12.394 0 23.097-3.12 32.163-9.353 9.093-6.25 16.11-15.047 21.066-26.43C198.5 107.766 201 94.196 201 78.5c0-15.698-2.5-29.266-7.484-40.716-4.955-11.384-11.973-20.18-21.066-26.431C163.384 5.119 152.681 2 140.287 2c-12.393 0-23.096 3.12-32.162 9.353-9.093 6.25-16.11 15.047-21.066 26.43-4.984 11.45-7.484 25.02-7.484 40.717 0 15.698 2.5 29.266 7.484 40.716 4.955 11.384 11.973 20.18 21.066 26.431 9.066 6.234 19.769 9.353 32.162 9.353zm0-31.368c-7.827 0-13.942-4.147-18.15-12.178-4.053-7.736-6.047-18.713-6.047-32.954s1.994-25.218 6.047-32.954c4.208-8.03 10.323-12.178 18.15-12.178 7.827 0 13.943 4.147 18.15 12.178 4.053 7.736 6.048 18.713 6.048 32.954s-1.995 25.218-6.047 32.954c-4.208 8.03-10.324 12.178-18.15 12.178z"></path></svg>'
 ]
 
+const catList = {
+    'Action':{
+        link:"https://www.sciencesetavenir.fr/assets/img/2014/09/03/cover-r4x3w1000-57df6ab13e750-regarder-les-films-d-action-ne-serait-pas-bon-pour-la-ligne.jpg",
+        color:"#e75710"
+    },
+    'Anime':{
+        link:"https://media-mcetv.ouest-france.fr/wp-content/uploads/2021/05/amazon-prime-devoile-son-grand-catalogue-danimes-.jpeg",
+        color:"#db2877"
+    },
+    'Comédies':{
+        link:"https://www.artistikrezo.com/wp-content/uploads/2020/01/lion.jpg",
+        color:"#c78a10"
+    },
+    'Documentaires':{
+        link:"https://www.programme-tv.net/imgre/fit/https.3A.2F.2Fprd2-tel-epg-img.2Es3-eu-west-1.2Eamazonaws.2Ecom.2Fprogram.2Fef03abc6b4caa395.2Ejpg/630x355/quality/80/documentaire.jpg",
+        color:"#159f49"
+    },
+    'Drames':{
+        link:"https://www.netflix-news.com/wp-content/uploads/2019/11/the-revenant-1200x720.jpg",
+        color:"#c82322"
+    },
+    'Fantastique':{
+        link:"https://www.babelio.com/users/liste_Selection-de-livres-FANTASTIQUES_4696.jpeg",
+        color:"#4e46e2"
+    },
+    'Français':{
+        link:"https://storage.googleapis.com/images.frenchmorning.com/2019/02/174-cinemovies-b5c-2e3-1456efa8f483970aedccacaaf7-movies-27793-10.jpg",
+        color:"#2662e7"
+    },
+    'Horreur':{
+        link:"https://fr.web.img6.acsta.net/newsv7/20/06/11/18/06/5028748.jpg",
+        color:"#65a411"
+    },
+    'Indépendants':{
+        link:"https://www.trigon-film.org/fr/movies/Los_Lobos/photos/large/lobos_08.jpg",
+        color:"#7035d6"
+    },
+    'International':{
+        link:"http://www.marlasmovies.com/wp-content/uploads/2019/03/lupita.jpg",
+        color:"#da2976"
+    },
+    'Jeunesse et famille':{
+        link:"https://cdn.radiofrance.fr/s3/cruiser-production/2020/11/963f9cba-6909-490b-b1d1-f8c0fad94090/870x489_toy-story-4.jpg",
+        color:"#d47916"
+    },
+    'Comédies musicales':{
+        link:"http://www.musicalavenue.fr/wp-content/uploads/Hamilton1OK.jpg",
+        color:"#068faf"
+    },
+    'Policier':{
+        link:"https://resize.programme-television.ladmedia.fr/rcrop/690,388/img/var/imports/agtv/5/4/3/2164492345_169.jpg",
+        color:"#d92976"
+    },
+    'Primés':{
+        link:"https://media.vanityfair.fr/photos/60d3716fdb141fd0eb5b651a/master/pass/vf_green_book_controverses_9306.jpeg",
+        color:"#e6560e"
+    },
+    'Romance':{
+        link:"https://image.jimcdn.com/app/cms/image/transf/dimension=755x10000:format=jpg/path/s63ccf77ce0e97436/image/iac863cc257d723b3/version/1433603709/image.jpg",
+        color:"#1ba14a"
+    },
+    'SF':{
+        link:"https://geekalition.com/wp-content/uploads/2021/11/outlier-finch-and-ghostbuster-afterlife.jpg",
+        color:"#9133e7"
+    },
+    'Thriller':{
+        link:"https://images.bfmtv.com/FUXg6jNrGGmJAMTZRcZHg8WX02A=/4x3:996x561/640x0/images/-135645.jpg",
+        color:"#e75710"
+    }
+}
+
+
 const corres = {
     32:128,
     48:192,
@@ -170,7 +242,39 @@ const writeCarr = (els, imgList, size, hasNumber, before) => {
 
 }
 
-writeCarr(['Ma liste', 'Série et fantastique', 'Reprendre avec le profil de moi', 'Tendances actuelles'], paysageList, 32, false, genre)
-writeCarr(['Neflix Orignials'], portraitList, 80, false, genre)
-writeCarr(['Top 10 aujourd\'hui'], portraitList, 48, true, genre)
+const writeCatList = (before) => {
+    let sect = document.createElement('section')
+    sect.classList.add('grid', 'px-10', 'gap-4', 'grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]')
+    
+    let h1 = document.createElement('h1')
+    h1.innerHTML = 'Programme par genre'
+    h1.classList.add('font-bold', 'ml-12', 'text-2xl', 'pt-5')
+    
+    
+    for (let cat in catList) {
+        let link = document.createElement('a')
+        link.href = '#'
+        link.classList.add('text-xl', 'h-20', 'rounded-lg', 'overflow-hidden', 'bg-cover', 'bg-top', 'bg-[url("'+ catList[cat].link +'")]')
+        
+        let color = document.createElement('div')
+        color.classList.add('flex', 'items-center', 'pl-3', 'font-semibold', 'bg-cover', 'bg-top', 'w-full', 'h-full', 'bg-gradient-to-r', 'from-['+catList[cat].color+']', 'hover:from-['+catList[cat].color+'AA]', 'to-['+catList[cat].color+'20]', 'cursor-pointer', 'transition-all', 'hover:opacity-75')
+        
+        let label = document.createElement('div')
+        label.innerHTML = cat
+        
+        
+        
+        color.appendChild(label)
+        link.appendChild(color)
+        sect.appendChild(link)
+    }
+    
+    main.insertBefore(h1, before)
+    main.insertBefore(sect, before)
+}
+
+writeCarr(['Ma liste', 'Série et fantastique', 'Reprendre avec le profil de moi', 'Tendances actuelles'], paysageList, 32, false, undefined)
+writeCarr(['Neflix Orignials'], portraitList, 80, false, undefined)
+writeCarr(['Top 10 aujourd\'hui'], portraitList, 48, true, undefined)
+writeCatList(undefined)
 writeCarr(['Action et aventure', 'Comédies', 'Animation', 'Romance', 'Films primés'], paysageList, 32, false, undefined)
