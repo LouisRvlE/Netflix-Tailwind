@@ -1,64 +1,86 @@
-const paysageList = [
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABT_D3_zYAnMbKShBBffPJyhCyGqMotptl8S-unBOVZnwi6d-4riaqP-JSZDL_XQlzRrtfNnT-QSoR2TvJJMD7OW1w5kzSfHuvVq6a1ejoi19OOchyLsGYGwf9qTK7O58RjVmCYriJBhEBS6kNHzpshcb1o89YA.jpg?r=98b",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe_LVfcx2EqqJwNU-NNW8cHqbLVnTA686vI3tkhTsldklFFJba3-V08WOxIiFmsFgCEkr0KLGhrGWNlcDx_XZuNrWG8.webp?r=1c1",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZF0fUI6N_FlnMWYTlwlLDw1gnNMd1Ox3KwHksqE43LXaW0Jf2GJ1QpeDtcJ0N-2jUipcp7LBEAhKEdKqUE6QR5wXIM.webp?r=8ed",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5v5fAzE56F4YxvxfaXq_ctGiO5hRe5i5UyUGmq8jLONDcU-50nX9CxheUfebWqI7O8UFzTRbHUZgIIWCh-4Kepg0ET0_uTCwQdCf1__Tf5jl3bH7oi7rR1F993.jpg?r=0c0",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfy7lXAcwYpgwlbSVYbNSFy3n6ionfrqbdvFhy0vR5fuwh7MR69GdBFvXYETlAZWQ74mwI8pMrHmt3JJhtXQYSVHvP2KyEfXuOZ-QoJg0BX0c9JDFwgUkfFjwgRo.jpg?r=8b2",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYh4_f9E2IFGJpbST1buf37M0JRF638qR3QRYUjWSehWQRwMF7iTU_RM7Pmz2gKJL4Qd3oSw2G9dbMDVMsiuGZfJCkbvZr9jr0D2G6alftW9h9ClAkZIwHQYmh34.jpg?r=a11",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYKzEn1E83VftmqOIbU2gPxwphFdA0QF619Fnk9_LgJbwrioR_k7QojtNftVgFNm9vxo0mEg0vcyYMBL02BaTR5xLJT9vpoS1Ber3f1R8scCUspDZ-Tj5qhhsQc1.jpg?r=cee",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdBmwd4YUZUOQ6UaI216YbnPkYGIpJu21s5sm0zhpm6CSfYrROmHemw_zG7TqkC08CHr4sDoTCz87YnESNepvaPp3O9yH9G2khsMly_cxq5y-cJ-JqJCSnyKZRmj.jpg?r=731",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTuKbE3KtHls9wNVTXXCjd2wPDfbk3_faC5f_n5GYnhDEVsm-S6KghBSL3c7pT9UnOneIz6ysMS3EBi-A2UnlqGioGI.webp?r=58b",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQnixfiPyATs-2kKh8JeNZgcOstEwZc7SxQbHRdohYJx-J3JywNytjLmMX0myov_EsTxrgMXxGXOstGTsd0sveN3wfw.webp?r=182",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfDf0Vj0o1SDHbnF3TnFVXPNts61KMy28aN6PQADoiwc6VTz0zlm7LdTDZBInGmb3jGA0yXHhfLesCOL6VYr4QhlVFg.webp?r=610",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQpNijDweKdoReLyphXJv7LXNUQNO4LLu70V0FaRY4fR9SgQBT_kHMu1eewyzE6oXJ_q_ZrHtxaZ3NomoD2T8cMFZGMzLZypX4Ys56mDsyHmHV2rBusFLKUs0SeI.jpg?r=8b0",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfMueXV4Pu0KTUC7H1Q5FKTOnn0njIf-m1EHvhT2HyAmsipV8aWMcVnNddF0x_ttObGxrFu95Z85KzMg3obVsSlrGCj7_TrRwqwJnz4UAu--EaGzAHtdlwk72i8d.jpg?r=dc8",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSag5dRaUKAx0Qoy0Hi3vaS9G0NtR3ORlmGzB0XK3MuiaMLazoEuTCRP3STh6S-9Z2cqBwKdEoAAD29De5u7PGmg-iajeJlPocmZHCbY9gw4hryWI0k92nSiv8Di.jpg?r=d2b",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVwrF3eG4g0MOPq2Ib24dVGQ3--DFaUG6k6E9hqhxY1DSH-_C4ObEQw2dY1qdnEbwyStrYQE7EKw9PEcq7mvCVWXREo.webp?r=f9d",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABV51k1cOR64KGpUKSpsX0P9O1FEjAA5zH08fP5UB54xCRskyZjWQpOhV7Va2HrQs4Dk9Dne01qRxYDTeyfrLdr81HBA.webp?r=905",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfy3XHIJC3-aI0TcEgZfSXtVsOG7-aHP_i8vX26NVW2acwuD1-XLJHtnm-jyxNnw6F2SokEERW2BsCy_RLddIUYSTrM.webp?r=3f6",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfgjKivi7Mf3eZ33ZNp60unrUIatohPlvuZM5MXyw9pCT3UF9sUzHgv45GMbUd62Eht0rEr9VceESgq9lO6mgfTZYmccNxd0KEd-InbBBXtwJTzkYwDFiTo7hCVs49Svro7is7hhuZ9PkEt7XPQc_NCHASWfy-V_RJt83tmyD-J3NCXXXRogatW93pF7z1L3xTRH8IBJSekMczhfe1obBNr6.jpg?r=4b6",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVQPYjZwfAGcp9HH6Bs1Quc4wBpiHwiZaRzL1WeWBxAu2TKG-Ie_qcc8rUxaI1aLG-tS_NhLIs4LAG0PqzFU_rHphKKWujfQMfS0jFobdse378DPsIOhx3tO2zPA.jpg?r=cb3",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdAlqQMZr5mEORjxSSIi-yDrTDdeym0n6DytueFe3b5XkHnPvJWmOrrh7Tau8Gz7kz_PjqU9pQtgeZT0Uo5fbUDz7qI.webp?r=68f",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcjyfjxuLubocqDE4f9-l2yjCsB4T-QSimrgu1Esbe28Uaj2mItEy_QZVki1Lz7aZjk1Mv6Hxm-ujDCVmPbWtke0RX4.webp?r=d67",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdNaJWquE4bnrWbdwHDia4N1OGeMH7Zvl9YLhIhyl5TQugpp0GMDQ_HKkSMbWUmC5eqzAC6Gs2GA7FLv0tHQBP_1wyk.webp?r=664",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUzBSzHWo59r_38S23jEyZU3Xmnwlxo4owEncE0flvG4sABQUAn4xvlRPmoThNkTdQ0JhtrTQFKzxIvEzcJUj-mBUtT4iF3EeZc8xLD6EGqRWp9imfvRIQj-jlRGVOl33ilgL-hjqrhn8lX0RMHKcFQPv08Xsv-y8OXkdCpEHi1V8D224H2jIYs.jpg?r=607",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRp9XqDG_M1eHgeNEc3CzHHhDMO_WgL2xDkn2f4tfwztc6RtQNxSIp-FhYnNhZpnaI7IipepygjEeCf5gOsZDoQN7Pzsr2CznbRgsDYLTvHR7GMwljXHWZKSu2Bf.jpg?r=2a5",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYzoJBJg6S4SObUd_iADMlub_Ahv9LkEVCN0fO9hs3zWJcOYi4xfM9G29vbI2wv8LsLtWNCqUmPCGNRJwaRP-fZUUEdl0H8ASZ1DzSovSBIE3L3GC83Q03tIJMLU.jpg?r=ad5",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcwm-36SzW-dpPj1mPX3U6Hm6qXPErtLctnI21scg_Y6xDqBFO9vmuSLVrkGWW5ISjUQO_thnBACFKdlzC38Pn6Dz0yBh8nYNpQOwiu5UzOUuiABQW6ImXherTE6.jpg?r=068",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABd7-CZo4ODqddF-rYDPZfP2KgfKWFg9mhIqGiJx5hpqLB66fk4KbQ-IyCw_cZeG98N5jokFP7b2ZYTuvEMH-l170DZN-y_HWSK4DQBSkuwP0kivmZnReFs0kP51U.jpg?r=cd7",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABR8btAiYYN6KRZyHKBzdZZgm6eefkypCzAjK26Qg34YW2JioR2AjwArGiNGhTZaP4oRjc3J-l7wzVJIhbPD4G2XwcnyRKqWkb4FAh_p1xR3a_LZpd2saMOUFn9Gf.jpg?r=3bb",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXf6xsY5389fPJ5IP4feLh55vQrnuEm9PhJZfwagM0J0zROyjic1DdhGI-KuhJEQE0dHKx9KHWmCom3NjC1As_iz6JTvHiUhTOzs2AM_wp8yNEE1GiJVVU708K23.jpg?r=4df",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe6d2Q_pOTWMJ1SIBYgYeLxWSwOe2v40nDtISm4oP4_3uLGHeUM6l1jKyiQjpx_FFIdqaFLvBPQl_27J9JACGmVsCNMNyLvgCIkW8zScUD9t1fvIeq35mDL1T1yj.jpg?r=dc7",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfElWxypeFdArI3EOGdFXq_P4AmDFD4aSNJKoTHiLhtY9wWnfONdcQ-Bc2uBU2eEHKWa_CAwDAFyQWeN5UQPDzRBKJ4oZJHGRcSJVtbTDRREH2FVQenXjWI_evgU.jpg?r=60d",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABY4wYfE8IQEyVmQZmq4FQt0AHe6awkwu6FGecv6rItAwFUCPpIQVKYZKWDHKlvOXT30dQt_hvuAH6gB8nuIIJWHFHAw.webp?r=ffe",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWvWEKmkhXndcR5vjL4TTMPCdtsbVdPHUddCjAPXUu6sIKtVRxXb3vlRJv1Dd78mTJyvc7PsvoW_Xd2b21ziSoAfzEQ.webp?r=725",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVasVZo4CuD8VAcDKo2aHbINYnUikdRyk2PlFmj8JfUY95Q1ywwCnk2KxWI-lfsvK9CE74HC80n_VU5ok6fGBDIOHQp-TO99mLO8LiQwzaaPZHUEVeBHpLaW4CJt.jpg?r=914",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVCk8jzsml62t9WPtlw1W8_fx86N3GwjT6NVrMqZ1CKeOYLyGDDwmHaKca037StdG55xSeSKJl7R4jKgKDuK670ehLk.webp?r=838",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeJpCuDVtgZI7AH3sDDyx_r5T-n-fCtfpxyhVybGkpsM585neUwG8ucpDA6YCAI6P8_HAvC3i4nGJ4WLDoQLhjJSVBw.webp?r=c8a",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbZ-6HQSNcsjn0GgOzhkIxIvXYaPt3NveuHCbsDOZHPliTXvzzozNKtWNtvx8AycFmvWBEFl70APzFrZ2pNEiQbzubQ.webp?r=46d",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZHBG6Lnm2ICImpErCMsARapGHkuv0zTmDGU2fdKGayCb9bme24yxjngXGtwhxJpfn7pVNA98ySLCHnStbCADodKEsM.webp?r=ea8",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbvl-BPVyn12Jacpd-FpgijQ8xkMbxvaaLJd9mA069lMoqZqfVPOYuhp5g0uZSozjW9GUR8EN4ubLQ_VFfe9ffkU3CI.webp?r=c14",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcJv7DP7MiQiC82QoQhAxdVbYbw0rDBMzB3yh2Mb3hvV3HuAsMcEutKS81cp6isetQAPfY8uW0huSJggjTyXfwUDL5c.webp?r=9a1",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdZsP3roMs1HVFFdiYhSZuy_JJnT-axVOH5-5FbuyISUmTRO3qMh5czB51zCEYisTzB_3yzFKb3992xrxsD5lY-0zvEjh9WIFzXISR88HzYDQ2C3BoGj8XLTjhy7kILQUzj0E7hcp3Xe5fOe2r4tPEvGPe5ybg.jpg?r=d5e",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABShHhvXPUELGeT2EvcmLhHKJf1qob-u64I655ugpO3_PnKeLvYodwXXQeviHwZOCN0NhAjgG4UNy3HRJZvmXnF5Y2l0.webp?r=e45",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcyYhYMhk83k9kjkogWegprIt9VvbqzxnD9X6-tsrjh_Y6ZeeZ5b_8XWMpGkotS-rwOA8tq4KiAAR1c8Tp7OOg_rwNE.webp?r=90a",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABa6MswfSIfB0tDYvLUa3eQwIzHDWwDqNqOTN9xAHoMuRm3MKFNW71mFTYRnogi1-nnXZ0COl9GngBWJQLAhEh03HvBpvoUzxx4dsUvrdM196o5M_t9G4r4tIB1UN.jpg?r=525",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQp37rn26QB0GzH-JWUba2E1TIQP_cw5YOKrwBm4L7arZ7tW0dcrSc8bLAS_mEnp31aRuZwNcJeI2x9xkJKa_NGE0U3jfvnz7-eOSgENnrUQigfT2JqaNv2kpT0B.jpg?r=984",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTJ4HpntSwTjYau5-mTdiFmtaH75s3t75ongS1SRV1cJOYV6GXGEdbO57n33nj4cd7buf9RhE8412qSk0MTUrmQWOhKc8CmCsEFuMpg7ldPsz-TStaTDGhI6tx6e.jpg?r=9b1",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSNqXmnQ9DqWmdAYypG-uS5pdjisYr7LsBy4Do8c27k29xCvBraOfTGJ1G6cWIWv-LP6oz20X0W5sTjgCiVihePoimB6i8FWH7w5sLyR-nki1RkfWAAFQtveDWFk.jpg?r=e94",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABaFMs8kcNrcQiWl2AlsBN9g5_V1vmpGDEqsO8Nsmz5GO8MIus00f2Bixmv7D4UayS_Q1ZrXTPqvEsZy_q4F6Tkv13VbqpDCgpbRF-QDK1Tu0_SuuDufotkdwzehAMSP2pFHDXDMCMDn6g9vQGy5IC5jE5rY6d1oy-UALTiLuds5Fi8cYhA9lGOE.jpg?r=153",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQtrKD_P2cRTrceJoEBR1lGnQYsbEICUBfMIEKcEskLP1J_pJEyv2p-sjxK3l2mume60jVEiIjGezpNvYHRmN_WpkvM.webp?r=cba",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbLeUzu4iW_KCbUkvZ41-4ICPmBbuFVifDxBJ1tNntw5dQB_i5OZEtROPopH2lgPe9ZnHtij6vVgLsdvCv8K9_8kwMfFgAXrJzaWujpfKx-D9MJ3l1qesItctxPEplo7wkPzHbRxGCSwxuSgfKTbXdSrWCHXWIehO0IJHuUC6yzEamyVGAGg0ZA.jpg?r=7df",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRCpSmaQ4OWGwC3xwe9qsuV0iOYOmuHI0rn_e3jiZ8dbbpRPxo9SS4TNQvPmyhAs68HV-igRL4Pg5wXkeIOgO3RXXKo.webp?r=1be",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQkekbKWYVVnkZsw-FCgq-71Sk6FOy-hConBw4TAdl03Fi5drKJyGr1xjzpxAhPQdUpJNS9bbKRNrn2CYY2gxmN5y_RtAk4VxKk4YygWKrSzYuTeRT4bAnU_JLpK_volnyMC7x1j-S7GSJ9OY5ixvDlMiRAGUJ7HH2pXRlG9eECWBvriNNwmGu8.jpg?r=564",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVWQ4jsQc0zOfEeNgAuZcS4eQowKX6o4sRL9zuwUkY2HeSJol0UIIG7J5UpyI1o-bInGchCmscQLEQxIKteISQrtBf8.webp?r=4fc",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABffzr_2cghc17F_25Bc4HE5MfUnNcDngTOsRlicCGzHc1Szf3cpYDCC8ifqfF8-ONSRTFEFNgIVOBTrOvjiLj57al1mtT30bn2kAnfz5M5Hpjs0bGRHGbQCNQTm0.jpg?r=c9a",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfZMn2i41BkAFwNEXoMDLIJAgqIPKoUDWuO7gXJIuooo_z4iBs-KcpOwxVL4wcuN7NzioaHRxBZSgyHwv3HOobbrxX8.webp?r=9d7",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUjsKDiaKwLmrV662pwmVKEtRmbJI-s8M9ojCqr2QEdnPUJPX86RP-n9IGXxGcaHWkTf-cwz5e4kBLN3jYLM7HuBfYA.webp?r=01d",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeiIi7MlQAuohMCGU_NYT-_FqqYI_bTsyJ1-ejRsW2cIIaR3Ynk0BCDA7GYcd4IWzWkH1n02PeYNcsLrZMHiTWP43OQ.webp?r=fa3",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeLaPhXh457HitrnFSPu6Yva_KGxAA2xB9rCt0DuFmILWtWtuUtQwLCecnhADaCgr75yTomq0S9GNDankr3TET_RY7vFbDw1GiTCv6GqR3T7Szl7u-f0F9WLWN8i.jpg?r=447",
-    "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABd4KeAL5sI0T6MzhRNASzLtOoD_GTird0yxYQ_qSYftfp-XqqqW_Fv4cS8Cho33WA3UD4opRrvBxN1fyrSLNsk9fSVA.webp?r=8dd"
-]
+const paysageList = {
+    'Action et aventure':[
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZF0fUI6N_FlnMWYTlwlLDw1gnNMd1Ox3KwHksqE43LXaW0Jf2GJ1QpeDtcJ0N-2jUipcp7LBEAhKEdKqUE6QR5wXIM.webp?r=8ed",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5v5fAzE56F4YxvxfaXq_ctGiO5hRe5i5UyUGmq8jLONDcU-50nX9CxheUfebWqI7O8UFzTRbHUZgIIWCh-4Kepg0ET0_uTCwQdCf1__Tf5jl3bH7oi7rR1F993.jpg?r=0c0",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfy7lXAcwYpgwlbSVYbNSFy3n6ionfrqbdvFhy0vR5fuwh7MR69GdBFvXYETlAZWQ74mwI8pMrHmt3JJhtXQYSVHvP2KyEfXuOZ-QoJg0BX0c9JDFwgUkfFjwgRo.jpg?r=8b2",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYh4_f9E2IFGJpbST1buf37M0JRF638qR3QRYUjWSehWQRwMF7iTU_RM7Pmz2gKJL4Qd3oSw2G9dbMDVMsiuGZfJCkbvZr9jr0D2G6alftW9h9ClAkZIwHQYmh34.jpg?r=a11",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdBmwd4YUZUOQ6UaI216YbnPkYGIpJu21s5sm0zhpm6CSfYrROmHemw_zG7TqkC08CHr4sDoTCz87YnESNepvaPp3O9yH9G2khsMly_cxq5y-cJ-JqJCSnyKZRmj.jpg?r=731",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcjyfjxuLubocqDE4f9-l2yjCsB4T-QSimrgu1Esbe28Uaj2mItEy_QZVki1Lz7aZjk1Mv6Hxm-ujDCVmPbWtke0RX4.webp?r=d67",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUzBSzHWo59r_38S23jEyZU3Xmnwlxo4owEncE0flvG4sABQUAn4xvlRPmoThNkTdQ0JhtrTQFKzxIvEzcJUj-mBUtT4iF3EeZc8xLD6EGqRWp9imfvRIQj-jlRGVOl33ilgL-hjqrhn8lX0RMHKcFQPv08Xsv-y8OXkdCpEHi1V8D224H2jIYs.jpg?r=607",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcJv7DP7MiQiC82QoQhAxdVbYbw0rDBMzB3yh2Mb3hvV3HuAsMcEutKS81cp6isetQAPfY8uW0huSJggjTyXfwUDL5c.webp?r=9a1",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdZsP3roMs1HVFFdiYhSZuy_JJnT-axVOH5-5FbuyISUmTRO3qMh5czB51zCEYisTzB_3yzFKb3992xrxsD5lY-0zvEjh9WIFzXISR88HzYDQ2C3BoGj8XLTjhy7kILQUzj0E7hcp3Xe5fOe2r4tPEvGPe5ybg.jpg?r=d5e",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABShHhvXPUELGeT2EvcmLhHKJf1qob-u64I655ugpO3_PnKeLvYodwXXQeviHwZOCN0NhAjgG4UNy3HRJZvmXnF5Y2l0.webp?r=e45",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcyYhYMhk83k9kjkogWegprIt9VvbqzxnD9X6-tsrjh_Y6ZeeZ5b_8XWMpGkotS-rwOA8tq4KiAAR1c8Tp7OOg_rwNE.webp?r=90a",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABa6MswfSIfB0tDYvLUa3eQwIzHDWwDqNqOTN9xAHoMuRm3MKFNW71mFTYRnogi1-nnXZ0COl9GngBWJQLAhEh03HvBpvoUzxx4dsUvrdM196o5M_t9G4r4tIB1UN.jpg?r=525",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQp37rn26QB0GzH-JWUba2E1TIQP_cw5YOKrwBm4L7arZ7tW0dcrSc8bLAS_mEnp31aRuZwNcJeI2x9xkJKa_NGE0U3jfvnz7-eOSgENnrUQigfT2JqaNv2kpT0B.jpg?r=984",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABaFMs8kcNrcQiWl2AlsBN9g5_V1vmpGDEqsO8Nsmz5GO8MIus00f2Bixmv7D4UayS_Q1ZrXTPqvEsZy_q4F6Tkv13VbqpDCgpbRF-QDK1Tu0_SuuDufotkdwzehAMSP2pFHDXDMCMDn6g9vQGy5IC5jE5rY6d1oy-UALTiLuds5Fi8cYhA9lGOE.jpg?r=153",
+
+    ], 
+    'Comédies et téléréalités':[
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfMueXV4Pu0KTUC7H1Q5FKTOnn0njIf-m1EHvhT2HyAmsipV8aWMcVnNddF0x_ttObGxrFu95Z85KzMg3obVsSlrGCj7_TrRwqwJnz4UAu--EaGzAHtdlwk72i8d.jpg?r=dc8",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVQPYjZwfAGcp9HH6Bs1Quc4wBpiHwiZaRzL1WeWBxAu2TKG-Ie_qcc8rUxaI1aLG-tS_NhLIs4LAG0PqzFU_rHphKKWujfQMfS0jFobdse378DPsIOhx3tO2zPA.jpg?r=cb3",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdNaJWquE4bnrWbdwHDia4N1OGeMH7Zvl9YLhIhyl5TQugpp0GMDQ_HKkSMbWUmC5eqzAC6Gs2GA7FLv0tHQBP_1wyk.webp?r=664",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRp9XqDG_M1eHgeNEc3CzHHhDMO_WgL2xDkn2f4tfwztc6RtQNxSIp-FhYnNhZpnaI7IipepygjEeCf5gOsZDoQN7Pzsr2CznbRgsDYLTvHR7GMwljXHWZKSu2Bf.jpg?r=2a5",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYzoJBJg6S4SObUd_iADMlub_Ahv9LkEVCN0fO9hs3zWJcOYi4xfM9G29vbI2wv8LsLtWNCqUmPCGNRJwaRP-fZUUEdl0H8ASZ1DzSovSBIE3L3GC83Q03tIJMLU.jpg?r=ad5",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcwm-36SzW-dpPj1mPX3U6Hm6qXPErtLctnI21scg_Y6xDqBFO9vmuSLVrkGWW5ISjUQO_thnBACFKdlzC38Pn6Dz0yBh8nYNpQOwiu5UzOUuiABQW6ImXherTE6.jpg?r=068",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABd7-CZo4ODqddF-rYDPZfP2KgfKWFg9mhIqGiJx5hpqLB66fk4KbQ-IyCw_cZeG98N5jokFP7b2ZYTuvEMH-l170DZN-y_HWSK4DQBSkuwP0kivmZnReFs0kP51U.jpg?r=cd7",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABR8btAiYYN6KRZyHKBzdZZgm6eefkypCzAjK26Qg34YW2JioR2AjwArGiNGhTZaP4oRjc3J-l7wzVJIhbPD4G2XwcnyRKqWkb4FAh_p1xR3a_LZpd2saMOUFn9Gf.jpg?r=3bb",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXf6xsY5389fPJ5IP4feLh55vQrnuEm9PhJZfwagM0J0zROyjic1DdhGI-KuhJEQE0dHKx9KHWmCom3NjC1As_iz6JTvHiUhTOzs2AM_wp8yNEE1GiJVVU708K23.jpg?r=4df",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe6d2Q_pOTWMJ1SIBYgYeLxWSwOe2v40nDtISm4oP4_3uLGHeUM6l1jKyiQjpx_FFIdqaFLvBPQl_27J9JACGmVsCNMNyLvgCIkW8zScUD9t1fvIeq35mDL1T1yj.jpg?r=dc7",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfElWxypeFdArI3EOGdFXq_P4AmDFD4aSNJKoTHiLhtY9wWnfONdcQ-Bc2uBU2eEHKWa_CAwDAFyQWeN5UQPDzRBKJ4oZJHGRcSJVtbTDRREH2FVQenXjWI_evgU.jpg?r=60d",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTJ4HpntSwTjYau5-mTdiFmtaH75s3t75ongS1SRV1cJOYV6GXGEdbO57n33nj4cd7buf9RhE8412qSk0MTUrmQWOhKc8CmCsEFuMpg7ldPsz-TStaTDGhI6tx6e.jpg?r=9b1",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVWQ4jsQc0zOfEeNgAuZcS4eQowKX6o4sRL9zuwUkY2HeSJol0UIIG7J5UpyI1o-bInGchCmscQLEQxIKteISQrtBf8.webp?r=4fc",
+
+    ], 
+    'Animation':[
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABT_D3_zYAnMbKShBBffPJyhCyGqMotptl8S-unBOVZnwi6d-4riaqP-JSZDL_XQlzRrtfNnT-QSoR2TvJJMD7OW1w5kzSfHuvVq6a1ejoi19OOchyLsGYGwf9qTK7O58RjVmCYriJBhEBS6kNHzpshcb1o89YA.jpg?r=98b",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe_LVfcx2EqqJwNU-NNW8cHqbLVnTA686vI3tkhTsldklFFJba3-V08WOxIiFmsFgCEkr0KLGhrGWNlcDx_XZuNrWG8.webp?r=1c1",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTuKbE3KtHls9wNVTXXCjd2wPDfbk3_faC5f_n5GYnhDEVsm-S6KghBSL3c7pT9UnOneIz6ysMS3EBi-A2UnlqGioGI.webp?r=58b",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQnixfiPyATs-2kKh8JeNZgcOstEwZc7SxQbHRdohYJx-J3JywNytjLmMX0myov_EsTxrgMXxGXOstGTsd0sveN3wfw.webp?r=182",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfDf0Vj0o1SDHbnF3TnFVXPNts61KMy28aN6PQADoiwc6VTz0zlm7LdTDZBInGmb3jGA0yXHhfLesCOL6VYr4QhlVFg.webp?r=610",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQpNijDweKdoReLyphXJv7LXNUQNO4LLu70V0FaRY4fR9SgQBT_kHMu1eewyzE6oXJ_q_ZrHtxaZ3NomoD2T8cMFZGMzLZypX4Ys56mDsyHmHV2rBusFLKUs0SeI.jpg?r=8b0",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSag5dRaUKAx0Qoy0Hi3vaS9G0NtR3ORlmGzB0XK3MuiaMLazoEuTCRP3STh6S-9Z2cqBwKdEoAAD29De5u7PGmg-iajeJlPocmZHCbY9gw4hryWI0k92nSiv8Di.jpg?r=d2b",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVwrF3eG4g0MOPq2Ib24dVGQ3--DFaUG6k6E9hqhxY1DSH-_C4ObEQw2dY1qdnEbwyStrYQE7EKw9PEcq7mvCVWXREo.webp?r=f9d",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfy3XHIJC3-aI0TcEgZfSXtVsOG7-aHP_i8vX26NVW2acwuD1-XLJHtnm-jyxNnw6F2SokEERW2BsCy_RLddIUYSTrM.webp?r=3f6",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdAlqQMZr5mEORjxSSIi-yDrTDdeym0n6DytueFe3b5XkHnPvJWmOrrh7Tau8Gz7kz_PjqU9pQtgeZT0Uo5fbUDz7qI.webp?r=68f",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABY4wYfE8IQEyVmQZmq4FQt0AHe6awkwu6FGecv6rItAwFUCPpIQVKYZKWDHKlvOXT30dQt_hvuAH6gB8nuIIJWHFHAw.webp?r=ffe",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWvWEKmkhXndcR5vjL4TTMPCdtsbVdPHUddCjAPXUu6sIKtVRxXb3vlRJv1Dd78mTJyvc7PsvoW_Xd2b21ziSoAfzEQ.webp?r=725",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVasVZo4CuD8VAcDKo2aHbINYnUikdRyk2PlFmj8JfUY95Q1ywwCnk2KxWI-lfsvK9CE74HC80n_VU5ok6fGBDIOHQp-TO99mLO8LiQwzaaPZHUEVeBHpLaW4CJt.jpg?r=914",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVCk8jzsml62t9WPtlw1W8_fx86N3GwjT6NVrMqZ1CKeOYLyGDDwmHaKca037StdG55xSeSKJl7R4jKgKDuK670ehLk.webp?r=838",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeJpCuDVtgZI7AH3sDDyx_r5T-n-fCtfpxyhVybGkpsM585neUwG8ucpDA6YCAI6P8_HAvC3i4nGJ4WLDoQLhjJSVBw.webp?r=c8a",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbZ-6HQSNcsjn0GgOzhkIxIvXYaPt3NveuHCbsDOZHPliTXvzzozNKtWNtvx8AycFmvWBEFl70APzFrZ2pNEiQbzubQ.webp?r=46d",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZHBG6Lnm2ICImpErCMsARapGHkuv0zTmDGU2fdKGayCb9bme24yxjngXGtwhxJpfn7pVNA98ySLCHnStbCADodKEsM.webp?r=ea8",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbvl-BPVyn12Jacpd-FpgijQ8xkMbxvaaLJd9mA069lMoqZqfVPOYuhp5g0uZSozjW9GUR8EN4ubLQ_VFfe9ffkU3CI.webp?r=c14",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSNqXmnQ9DqWmdAYypG-uS5pdjisYr7LsBy4Do8c27k29xCvBraOfTGJ1G6cWIWv-LP6oz20X0W5sTjgCiVihePoimB6i8FWH7w5sLyR-nki1RkfWAAFQtveDWFk.jpg?r=e94",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQtrKD_P2cRTrceJoEBR1lGnQYsbEICUBfMIEKcEskLP1J_pJEyv2p-sjxK3l2mume60jVEiIjGezpNvYHRmN_WpkvM.webp?r=cba",
+
+    ], 
+    'Romance':[
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYKzEn1E83VftmqOIbU2gPxwphFdA0QF619Fnk9_LgJbwrioR_k7QojtNftVgFNm9vxo0mEg0vcyYMBL02BaTR5xLJT9vpoS1Ber3f1R8scCUspDZ-Tj5qhhsQc1.jpg?r=cee",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfgjKivi7Mf3eZ33ZNp60unrUIatohPlvuZM5MXyw9pCT3UF9sUzHgv45GMbUd62Eht0rEr9VceESgq9lO6mgfTZYmccNxd0KEd-InbBBXtwJTzkYwDFiTo7hCVs49Svro7is7hhuZ9PkEt7XPQc_NCHASWfy-V_RJt83tmyD-J3NCXXXRogatW93pF7z1L3xTRH8IBJSekMczhfe1obBNr6.jpg?r=4b6",
+        "./assets/img/pasderomance.png",
+        "./assets/img/pasderomance.png",
+        "./assets/img/pasderomance.png",
+        "./assets/img/pasderomance.png",
+        "./assets/img/pasderomance.png",
+        "./assets/img/pasderomance.png",
+        "./assets/img/pasderomance.png",
+        "./assets/img/pasderomance.png",
+    ], 
+    'Films primés':[
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABV51k1cOR64KGpUKSpsX0P9O1FEjAA5zH08fP5UB54xCRskyZjWQpOhV7Va2HrQs4Dk9Dne01qRxYDTeyfrLdr81HBA.webp?r=905",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbLeUzu4iW_KCbUkvZ41-4ICPmBbuFVifDxBJ1tNntw5dQB_i5OZEtROPopH2lgPe9ZnHtij6vVgLsdvCv8K9_8kwMfFgAXrJzaWujpfKx-D9MJ3l1qesItctxPEplo7wkPzHbRxGCSwxuSgfKTbXdSrWCHXWIehO0IJHuUC6yzEamyVGAGg0ZA.jpg?r=7df",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRCpSmaQ4OWGwC3xwe9qsuV0iOYOmuHI0rn_e3jiZ8dbbpRPxo9SS4TNQvPmyhAs68HV-igRL4Pg5wXkeIOgO3RXXKo.webp?r=1be",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQkekbKWYVVnkZsw-FCgq-71Sk6FOy-hConBw4TAdl03Fi5drKJyGr1xjzpxAhPQdUpJNS9bbKRNrn2CYY2gxmN5y_RtAk4VxKk4YygWKrSzYuTeRT4bAnU_JLpK_volnyMC7x1j-S7GSJ9OY5ixvDlMiRAGUJ7HH2pXRlG9eECWBvriNNwmGu8.jpg?r=564",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABffzr_2cghc17F_25Bc4HE5MfUnNcDngTOsRlicCGzHc1Szf3cpYDCC8ifqfF8-ONSRTFEFNgIVOBTrOvjiLj57al1mtT30bn2kAnfz5M5Hpjs0bGRHGbQCNQTm0.jpg?r=c9a",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfZMn2i41BkAFwNEXoMDLIJAgqIPKoUDWuO7gXJIuooo_z4iBs-KcpOwxVL4wcuN7NzioaHRxBZSgyHwv3HOobbrxX8.webp?r=9d7",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUjsKDiaKwLmrV662pwmVKEtRmbJI-s8M9ojCqr2QEdnPUJPX86RP-n9IGXxGcaHWkTf-cwz5e4kBLN3jYLM7HuBfYA.webp?r=01d",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeiIi7MlQAuohMCGU_NYT-_FqqYI_bTsyJ1-ejRsW2cIIaR3Ynk0BCDA7GYcd4IWzWkH1n02PeYNcsLrZMHiTWP43OQ.webp?r=fa3",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeLaPhXh457HitrnFSPu6Yva_KGxAA2xB9rCt0DuFmILWtWtuUtQwLCecnhADaCgr75yTomq0S9GNDankr3TET_RY7vFbDw1GiTCv6GqR3T7Szl7u-f0F9WLWN8i.jpg?r=447",
+        "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABd4KeAL5sI0T6MzhRNASzLtOoD_GTird0yxYQ_qSYftfp-XqqqW_Fv4cS8Cho33WA3UD4opRrvBxN1fyrSLNsk9fSVA.webp?r=8dd"
+
+    ]
+}
 
 const portraitList = [
     "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABeFK69TfNe71uJQ9-x76ku34fbJ925LjpgRYPbVf9T_q4Am85G13McQ9C1I12C_AFULcHaXrvJBM9cJuH_eJIsQzDv3zMcqtN2wzPNwux1aMRW_z-4OAc7p5v0Qzcw.webp?r=ae8",
@@ -157,7 +179,6 @@ const catList = {
     }
 }
 
-
 const corres = {
     32:128,
     48:192,
@@ -176,7 +197,7 @@ const scrollto = (el, of) => {
       })
 }
 
-const writeCarr = (els, imgList, size, hasNumber, before) => {
+const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
 
     for (let el of els) {
         let list = imgList
@@ -191,16 +212,31 @@ const writeCarr = (els, imgList, size, hasNumber, before) => {
         let caroussel = document.createElement('div')
         caroussel.classList.add('flex', 'w-max', 'space-x-2', 'mx-10', 'scroll-smooth')
 
+        if (catImportant) {
+            list = list[el]
+        } else {
+            if (!Array.isArray(list)) {
+                let newList = []
+                for (subListKey of Object.keys(list)) {
+                    let subList = list[subListKey]
+                    // console.log(subList)
+                    newList = [...newList, ...subList]
+                }
+                list = newList
+            }
+        }
         for (let i = 0; i < 15 && list.length !== 0; i++) {
 
             let img = document.createElement('img')
             img.classList.add("rounded-md", 'cursor-pointer', "h-" + size)
+
             let random = Math.floor(Math.random() * (list.length))
             img.src = list[random]
 
             list = list.filter(function (value, index, arr) {
                 return index !== random;
             });
+
 
             let a = document.createElement('a')
             if (hasNumber) {
@@ -262,8 +298,6 @@ const writeCatList = (before) => {
         let label = document.createElement('div')
         label.innerHTML = cat
         
-        
-        
         color.appendChild(label)
         link.appendChild(color)
         sect.appendChild(link)
@@ -273,8 +307,19 @@ const writeCatList = (before) => {
     main.insertBefore(sect, before)
 }
 
-writeCarr(['Ma liste', 'Série et fantastique', 'Reprendre avec le profil de moi', 'Tendances actuelles'], paysageList, 32, false, undefined)
-writeCarr(['Neflix Orignials'], portraitList, 80, false, undefined)
-writeCarr(['Top 10 aujourd\'hui'], portraitList, 48, true, undefined)
+writeCarr(['Ma liste', 'Regarder à nouveau', 'Reprendre avec le profil de moi', 'Tendances actuelles'], paysageList, 32, false, false, undefined)
+writeCarr(['Neflix Orignials'], portraitList, 80, false, false, undefined)
+writeCarr(['Top 10 aujourd\'hui'], portraitList, 48, true, false, undefined)
 writeCatList(undefined)
-writeCarr(['Action et aventure', 'Comédies', 'Animation', 'Romance', 'Films primés'], paysageList, 32, false, undefined)
+
+// Ajout des sections spécialisés, le 5e argument de la fonction signifie que la catérgorie doit être respectée
+writeCarr(['Action et aventure', 'Comédies et téléréalités', 'Animation', 'Romance', 'Films primés'], paysageList, 32, false, true, undefined)
+
+window.addEventListener('scroll', (e) => {
+    let navbar = document.getElementById('navbar')
+    if (window.scrollY > 100) {
+        navbar.classList.add('bg-[#141414]')
+    } else {
+        navbar.classList.remove('bg-[#141414]')
+    }
+})
