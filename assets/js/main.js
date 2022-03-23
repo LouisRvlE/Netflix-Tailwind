@@ -241,7 +241,7 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
 
 
             let a = document.createElement('a')
-            a.classList.add('transition-all')
+            a.classList.add('transition-all', 'delay-1000')
             if (hasNumber) {
                 let number = document.createElement('div')
                 number.classList.add('h-' + size, 'ml-10')
@@ -258,10 +258,10 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
             
             if (size !== 48) {
                 let video = document.createElement('div')
-                video.classList.add('w-full', "h-["+(corres[size][0]+1)+"px]", 'mt-[-'+(corres[size][0]+1)+'px]', 'opacity-0', "rounded-md", "cursor-pointer")
+                video.classList.add('w-full', "h-["+(corres[size][0]+1)+"px]", 'mt-[-'+(corres[size][0]+1)+'px]', 'opacity-0', "rounded-md", 'transition-all', 'duration-500', 'delay-1000', "cursor-pointer")
     
                 let vid = document.createElement('video')
-                vid.classList.add('absolute', 'objet-cover', 'w-full', "h-["+(corres[size][0]+1)+"px]", 'opacity-100', 'transition-all', 'duration-500', "rounded-md")
+                vid.classList.add('absolute', 'objet-cover', 'w-full', "h-["+(corres[size][0]+1)+"px]", 'opacity-100', 'transition-all', 'duration-500', 'delay-1000', "rounded-md")
                 vid.muted = true
                 vid.loop = true
                 vid.src = "./assets/vid/Peaky Blinders - Season 1 _ Trailer.mp4"
@@ -273,12 +273,18 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
                     a.classList.add('scale-125')
                     video.classList.add('opacity-100')
                     vid.play()
+                    setTimeout(() => {
+                        a.classList.add('z-10')
+                    }, 1000)
                 }
                 
                 a.onmouseout = () => {
                     a.classList.remove('scale-125')
                     video.classList.remove('opacity-100')
-                    vid.pause()
+                    setTimeout(() => {
+                        vid.pause()
+                        a.classList.remove('z-10')
+                    }, 1000)
                 }
                 a.appendChild(video)
             } else {
@@ -307,7 +313,6 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
         const rightAngle = document.createElement('i')
         rightAngle.classList.add("fa-solid", "fa-angle-right")
         rightButton.appendChild(rightAngle)
-
 
         main.insertBefore(h1, before)
         sect.appendChild(leftButton)
