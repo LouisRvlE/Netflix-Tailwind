@@ -256,7 +256,7 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
             a.appendChild(img)
             
             
-            if (size !== 48) {
+            if (size === 32) {
                 let video = document.createElement('div')
                 video.classList.add('w-full', "h-["+(corres[size][0]+1)+"px]", 'mt-[-'+(corres[size][0]+1)+'px]', 'opacity-0', "rounded-md", 'transition-all', 'duration-500', 'delay-1000', "cursor-pointer")
     
