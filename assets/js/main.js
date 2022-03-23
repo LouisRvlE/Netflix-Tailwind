@@ -179,10 +179,12 @@ const catList = {
     }
 }
 
+const vid = '<video autoplay loop muted id="video" class="h-5 w-5" src="./assets/vid/Peaky Blinders - Season 1 _ Trailer.mp4"></video>'
+
 const corres = {
-    32:128,
-    48:192,
-    80:320
+    32:[128, 10, 16],
+    48:[192, 15, 25],
+    80:[320, 25, 40]
 }
 
 let main = document.getElementById('main')
@@ -202,7 +204,7 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
     for (let el of els) {
         let list = imgList
         let sect = document.createElement('section')
-        sect.classList.add('w-auto', 'overflow-x-scroll', 'no-scrollbar', 'group')
+        sect.classList.add('w-auto', 'overflow-x-scroll', 'no-scrollbar', 'group', 'h-['+corres[size][1]+'rem]', 'pt-['+corres[size][2]+'px]', 'my-[-'+corres[size][2]+'x]')
         sect.id = el;
 
         let h1 = document.createElement('h1')
@@ -210,7 +212,7 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
         h1.classList.add('font-bold', 'ml-12', 'text-2xl', 'pt-5')
 
         let caroussel = document.createElement('div')
-        caroussel.classList.add('flex', 'w-max', 'space-x-2', 'mx-10', 'scroll-smooth')
+        caroussel.classList.add('flex', 'w-max', 'space-x-2', 'mx-10')
 
         if (catImportant) {
             list = list[el]
@@ -239,6 +241,7 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
 
 
             let a = document.createElement('a')
+            a.classList.add('transition-all')
             if (hasNumber) {
                 let number = document.createElement('div')
                 number.classList.add('h-' + size, 'ml-10')
@@ -246,21 +249,39 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
                 a.appendChild(number)
                 a.classList.add('flex')
             }
+
+            // let video = document.createElement('div')
+            // video.innerHTML = vid
+            // video.classList.add('w-full', 'h-full', 'mt-[-'+corres[size][0]+'px]')
+
+
+
+            a.onmouseover = () => {
+                a.classList.add('scale-125')
+            }
+            
+            a.onmouseout = () => {
+                a.classList.remove('scale-125')
+                
+            }
+
+
             a.appendChild(img)
+            // a.appendChild(video)
             caroussel.appendChild(a)
 
         }
 
         const leftButton = document.createElement('button')
         leftButton.onclick = () => scrollto(el, -1)
-        leftButton.classList.add("absolute", "group-hover:opacity-100", "opacity-0", "transition-all", "duration-300", "bg-gradient-to-r", "from-[#141414]", "to-[rgb(0,0,0,0)]", "h-["+corres[size]+"px]", "w-24", "text-3xl")
+        leftButton.classList.add("absolute", 'z-[10]', "group-hover:opacity-100", "opacity-0", "transition-all", "duration-300", "bg-gradient-to-r", "from-[#141414]", "to-[rgb(0,0,0,0)]", "h-["+corres[size][0]+"px]", "w-24", "text-3xl")
         const leftAngle = document.createElement('i')
         leftAngle.classList.add("fa-solid", "fa-angle-left")
         leftButton.appendChild(leftAngle)
         
         const rightButton = document.createElement('button')
         rightButton.onclick = () => scrollto(el, 1)
-        rightButton.classList.add("absolute", "group-hover:opacity-100", "opacity-0", "transition-all", "duration-300", "bg-gradient-to-l", "from-[#141414]", "to-[rgb(0,0,0,0)]", "right-0", "h-["+corres[size]+"px]", "w-24", "text-3xl")
+        rightButton.classList.add("absolute", 'z-[10]', "group-hover:opacity-100", "opacity-0", "transition-all", "duration-300", "bg-gradient-to-l", "from-[#141414]", "to-[rgb(0,0,0,0)]", "right-0", "h-["+corres[size][0]+"px]", "w-24", "text-3xl")
         const rightAngle = document.createElement('i')
         rightAngle.classList.add("fa-solid", "fa-angle-right")
         rightButton.appendChild(rightAngle)
@@ -322,4 +343,15 @@ window.addEventListener('scroll', (e) => {
     } else {
         navbar.classList.remove('bg-[#141414]')
     }
+})
+
+const header = document.getElementById('header');
+const video = document.getElementById('video');
+
+header.addEventListener("mouseover", () => {
+    video.classList.add('opacity-100')
+})
+
+header.addEventListener("mouseout", () => {
+    video.classList.remove('opacity-100')
 })
