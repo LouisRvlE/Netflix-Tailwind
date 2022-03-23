@@ -178,8 +178,8 @@ const catList = {
         color:"#e75710"
     }
 }
-
-const vid = '<video autoplay loop muted id="video" class="h-5 w-5" src="./assets/vid/Peaky Blinders - Season 1 _ Trailer.mp4"></video>'
+// const vid = '<iframe width="745" height="559" src="https://www.youtube.com/embed/GEwLnxOmW7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+// const vid = '<iframe id="video" class="absolute bg-cover bg-top w-full h-full w-full opacity-100 transition-all duration-500" src="https://www.youtube.com/embed/oVzVdvGIC7U?autoplay=0&controls=0&muted=1&cc_load_policy=0&disablekb=1&loop=1&modestbranding=0&rel=0&showinfo=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
 const corres = {
     32:[128, 10, 16],
@@ -206,13 +206,13 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
         let sect = document.createElement('section')
         sect.classList.add('w-auto', 'overflow-x-scroll', 'no-scrollbar', 'group', 'h-['+corres[size][1]+'rem]', 'pt-['+corres[size][2]+'px]', 'my-[-'+corres[size][2]+'x]')
         sect.id = el;
-
+        
         let h1 = document.createElement('h1')
         h1.innerHTML = el
         h1.classList.add('font-bold', 'ml-12', 'text-2xl', 'pt-5')
 
         let caroussel = document.createElement('div')
-        caroussel.classList.add('flex', 'w-max', 'space-x-2', 'mx-10')
+        caroussel.classList.add('flex', 'w-max', 'space-x-2', 'mx-10', "h-["+corres[size][0]+"px]")
 
         if (catImportant) {
             list = list[el]
@@ -250,24 +250,46 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
                 a.classList.add('flex')
             }
 
-            // let video = document.createElement('div')
-            // video.innerHTML = vid
-            // video.classList.add('w-full', 'h-full', 'mt-[-'+corres[size][0]+'px]')
-
-
-
-            a.onmouseover = () => {
-                a.classList.add('scale-125')
-            }
             
-            a.onmouseout = () => {
-                a.classList.remove('scale-125')
-                
-            }
-
-
+            
+            
             a.appendChild(img)
-            // a.appendChild(video)
+            
+            
+            if (size !== 48) {
+                let video = document.createElement('div')
+                video.classList.add('w-full', "h-["+(corres[size][0]+1)+"px]", 'mt-[-'+(corres[size][0]+1)+'px]', 'opacity-0', "rounded-md", "cursor-pointer")
+    
+                let vid = document.createElement('video')
+                vid.classList.add('absolute', 'objet-cover', 'w-full', "h-["+(corres[size][0]+1)+"px]", 'opacity-100', 'transition-all', 'duration-500', "rounded-md")
+                vid.muted = true
+                vid.loop = true
+                vid.src = "./assets/vid/Peaky Blinders - Season 1 _ Trailer.mp4"
+    
+                video.appendChild(vid)
+                
+                
+                a.onmouseover = () => {
+                    a.classList.add('scale-125')
+                    video.classList.add('opacity-100')
+                    vid.play()
+                }
+                
+                a.onmouseout = () => {
+                    a.classList.remove('scale-125')
+                    video.classList.remove('opacity-100')
+                    vid.pause()
+                }
+                a.appendChild(video)
+            } else {
+                a.onmouseover = () => {
+                    a.classList.add('scale-125')
+                }
+                
+                a.onmouseout = () => {
+                    a.classList.remove('scale-125')
+                }
+            }
             caroussel.appendChild(a)
 
         }
