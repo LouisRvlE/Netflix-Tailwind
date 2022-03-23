@@ -258,10 +258,10 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
             
             if (size === 32) {
                 let video = document.createElement('div')
-                video.classList.add('w-full', "h-["+(corres[size][0]+1)+"px]", 'mt-[-'+(corres[size][0]+1)+'px]', 'opacity-0', "rounded-md", 'transition-all', 'duration-500', 'delay-1000', "cursor-pointer")
+                video.classList.add('w-[228px]', "h-["+(corres[size][0])+1+"px]", 'mt-[-'+(corres[size][0]+1)+'px]', 'ml-[-1px]', 'overflow-hidden', 'opacity-0', "rounded-md", 'transition-all', 'duration-500', 'delay-1000', "cursor-pointer")
     
                 let vid = document.createElement('video')
-                vid.classList.add('absolute', 'objet-cover', 'w-full', "h-["+(corres[size][0]+1)+"px]", 'opacity-100', 'transition-all', 'duration-500', 'delay-1000', "rounded-md")
+                vid.classList.add('relative', 'object-cover', 'w-full', "h-["+(corres[size][0]+5)+"px]", 'opacity-100', 'transition-all', 'duration-500', 'delay-1000', "rounded-md")
                 vid.muted = true
                 vid.loop = true
                 vid.src = "./assets/vid/Peaky Blinders - Season 1 _ Trailer.mp4"
