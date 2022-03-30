@@ -264,7 +264,7 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
                 vid.classList.add('relative', 'object-cover', 'w-full', "h-["+(corres[size][0]+5)+"px]", 'opacity-100', 'transition-all', 'duration-500', 'delay-1000', "rounded-md")
                 vid.muted = true
                 vid.loop = true
-                vid.src = "./assets/vid/Peaky Blinders - Season 1 _ Trailer.mp4"
+                vid.src = i%2 ? "./assets/vid/Peaky Blinders - Season 1 _ Trailer.mp4" : "./assets/vid/Drôle _ Bande-annonce officielle VF _ Netflix France.mp4"
     
                 video.appendChild(vid)
                 
