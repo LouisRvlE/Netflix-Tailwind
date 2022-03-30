@@ -1,0 +1,22 @@
+{
+  "name": "netflix",
+  "version": "1.0.0",
+  "description": "\"# Netflix-Tailwind\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LouisRvlE/Netflix-Tailwind.git"
+  },
+  "author": "LouisRvlE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LouisRvlE/Netflix-Tailwind/issues"
+  },
+  "homepage": "https://github.com/LouisRvlE/Netflix-Tailwind#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  }
+}

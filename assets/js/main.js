@@ -1,5 +1,5 @@
 const paysageList = {
-    'Action et aventure':[
+    'Action et aventure': [
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZF0fUI6N_FlnMWYTlwlLDw1gnNMd1Ox3KwHksqE43LXaW0Jf2GJ1QpeDtcJ0N-2jUipcp7LBEAhKEdKqUE6QR5wXIM.webp?r=8ed",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX5v5fAzE56F4YxvxfaXq_ctGiO5hRe5i5UyUGmq8jLONDcU-50nX9CxheUfebWqI7O8UFzTRbHUZgIIWCh-4Kepg0ET0_uTCwQdCf1__Tf5jl3bH7oi7rR1F993.jpg?r=0c0",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfy7lXAcwYpgwlbSVYbNSFy3n6ionfrqbdvFhy0vR5fuwh7MR69GdBFvXYETlAZWQ74mwI8pMrHmt3JJhtXQYSVHvP2KyEfXuOZ-QoJg0BX0c9JDFwgUkfFjwgRo.jpg?r=8b2",
@@ -15,8 +15,8 @@ const paysageList = {
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQp37rn26QB0GzH-JWUba2E1TIQP_cw5YOKrwBm4L7arZ7tW0dcrSc8bLAS_mEnp31aRuZwNcJeI2x9xkJKa_NGE0U3jfvnz7-eOSgENnrUQigfT2JqaNv2kpT0B.jpg?r=984",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABaFMs8kcNrcQiWl2AlsBN9g5_V1vmpGDEqsO8Nsmz5GO8MIus00f2Bixmv7D4UayS_Q1ZrXTPqvEsZy_q4F6Tkv13VbqpDCgpbRF-QDK1Tu0_SuuDufotkdwzehAMSP2pFHDXDMCMDn6g9vQGy5IC5jE5rY6d1oy-UALTiLuds5Fi8cYhA9lGOE.jpg?r=153",
 
-    ], 
-    'Comédies et téléréalités':[
+    ],
+    'Comédies et téléréalités': [
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfMueXV4Pu0KTUC7H1Q5FKTOnn0njIf-m1EHvhT2HyAmsipV8aWMcVnNddF0x_ttObGxrFu95Z85KzMg3obVsSlrGCj7_TrRwqwJnz4UAu--EaGzAHtdlwk72i8d.jpg?r=dc8",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVQPYjZwfAGcp9HH6Bs1Quc4wBpiHwiZaRzL1WeWBxAu2TKG-Ie_qcc8rUxaI1aLG-tS_NhLIs4LAG0PqzFU_rHphKKWujfQMfS0jFobdse378DPsIOhx3tO2zPA.jpg?r=cb3",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdNaJWquE4bnrWbdwHDia4N1OGeMH7Zvl9YLhIhyl5TQugpp0GMDQ_HKkSMbWUmC5eqzAC6Gs2GA7FLv0tHQBP_1wyk.webp?r=664",
@@ -31,8 +31,8 @@ const paysageList = {
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTJ4HpntSwTjYau5-mTdiFmtaH75s3t75ongS1SRV1cJOYV6GXGEdbO57n33nj4cd7buf9RhE8412qSk0MTUrmQWOhKc8CmCsEFuMpg7ldPsz-TStaTDGhI6tx6e.jpg?r=9b1",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVWQ4jsQc0zOfEeNgAuZcS4eQowKX6o4sRL9zuwUkY2HeSJol0UIIG7J5UpyI1o-bInGchCmscQLEQxIKteISQrtBf8.webp?r=4fc",
 
-    ], 
-    'Animation':[
+    ],
+    'Animation': [
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABT_D3_zYAnMbKShBBffPJyhCyGqMotptl8S-unBOVZnwi6d-4riaqP-JSZDL_XQlzRrtfNnT-QSoR2TvJJMD7OW1w5kzSfHuvVq6a1ejoi19OOchyLsGYGwf9qTK7O58RjVmCYriJBhEBS6kNHzpshcb1o89YA.jpg?r=98b",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe_LVfcx2EqqJwNU-NNW8cHqbLVnTA686vI3tkhTsldklFFJba3-V08WOxIiFmsFgCEkr0KLGhrGWNlcDx_XZuNrWG8.webp?r=1c1",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTuKbE3KtHls9wNVTXXCjd2wPDfbk3_faC5f_n5GYnhDEVsm-S6KghBSL3c7pT9UnOneIz6ysMS3EBi-A2UnlqGioGI.webp?r=58b",
@@ -54,8 +54,8 @@ const paysageList = {
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSNqXmnQ9DqWmdAYypG-uS5pdjisYr7LsBy4Do8c27k29xCvBraOfTGJ1G6cWIWv-LP6oz20X0W5sTjgCiVihePoimB6i8FWH7w5sLyR-nki1RkfWAAFQtveDWFk.jpg?r=e94",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQtrKD_P2cRTrceJoEBR1lGnQYsbEICUBfMIEKcEskLP1J_pJEyv2p-sjxK3l2mume60jVEiIjGezpNvYHRmN_WpkvM.webp?r=cba",
 
-    ], 
-    'Romance':[
+    ],
+    'Romance': [
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYKzEn1E83VftmqOIbU2gPxwphFdA0QF619Fnk9_LgJbwrioR_k7QojtNftVgFNm9vxo0mEg0vcyYMBL02BaTR5xLJT9vpoS1Ber3f1R8scCUspDZ-Tj5qhhsQc1.jpg?r=cee",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfgjKivi7Mf3eZ33ZNp60unrUIatohPlvuZM5MXyw9pCT3UF9sUzHgv45GMbUd62Eht0rEr9VceESgq9lO6mgfTZYmccNxd0KEd-InbBBXtwJTzkYwDFiTo7hCVs49Svro7is7hhuZ9PkEt7XPQc_NCHASWfy-V_RJt83tmyD-J3NCXXXRogatW93pF7z1L3xTRH8IBJSekMczhfe1obBNr6.jpg?r=4b6",
         "./assets/img/pasderomance.png",
@@ -66,8 +66,8 @@ const paysageList = {
         "./assets/img/pasderomance.png",
         "./assets/img/pasderomance.png",
         "./assets/img/pasderomance.png",
-    ], 
-    'Films primés':[
+    ],
+    'Films primés': [
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABV51k1cOR64KGpUKSpsX0P9O1FEjAA5zH08fP5UB54xCRskyZjWQpOhV7Va2HrQs4Dk9Dne01qRxYDTeyfrLdr81HBA.webp?r=905",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbLeUzu4iW_KCbUkvZ41-4ICPmBbuFVifDxBJ1tNntw5dQB_i5OZEtROPopH2lgPe9ZnHtij6vVgLsdvCv8K9_8kwMfFgAXrJzaWujpfKx-D9MJ3l1qesItctxPEplo7wkPzHbRxGCSwxuSgfKTbXdSrWCHXWIehO0IJHuUC6yzEamyVGAGg0ZA.jpg?r=7df",
         "https://occ-0-56-55.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRCpSmaQ4OWGwC3xwe9qsuV0iOYOmuHI0rn_e3jiZ8dbbpRPxo9SS4TNQvPmyhAs68HV-igRL4Pg5wXkeIOgO3RXXKo.webp?r=1be",
@@ -109,94 +109,174 @@ const numberList = [
 ]
 
 const catList = {
-    'Action':{
-        link:"https://www.sciencesetavenir.fr/assets/img/2014/09/03/cover-r4x3w1000-57df6ab13e750-regarder-les-films-d-action-ne-serait-pas-bon-pour-la-ligne.jpg",
-        color:"#e75710"
+    'Action': {
+        link: "bg-[url(https://www.sciencesetavenir.fr/assets/img/2014/09/03/cover-r4x3w1000-57df6ab13e750-regarder-les-films-d-action-ne-serait-pas-bon-pour-la-ligne.jpg)]",
+        from: "from-[#e75710]",
+        hoverFrom: "hover:from-[#e75710AA]",
+        to: "to-[#e7571020]"
     },
-    'Anime':{
-        link:"https://media-mcetv.ouest-france.fr/wp-content/uploads/2021/05/amazon-prime-devoile-son-grand-catalogue-danimes-.jpeg",
-        color:"#db2877"
+    'Anime': {
+        link: "bg-[url(https://media-mcetv.ouest-france.fr/wp-content/uploads/2021/05/amazon-prime-devoile-son-grand-catalogue-danimes-.jpeg)]",
+        from: "from-[#db2877]",
+        hoverFrom: "hover:from-[#db2877AA]",
+        to: "to-[#db287720]"
     },
-    'Comédies':{
-        link:"https://www.artistikrezo.com/wp-content/uploads/2020/01/lion.jpg",
-        color:"#c78a10"
+    'Comédies': {
+        link: "bg-[url(https://www.artistikrezo.com/wp-content/uploads/2020/01/lion.jpg)]",
+        from: "from-[#c78a10]",
+        hoverFrom: "hover:from-[#c78a10AA]",
+        to: "to-[#c78a1020]"
     },
-    'Documentaires':{
-        link:"https://www.programme-tv.net/imgre/fit/https.3A.2F.2Fprd2-tel-epg-img.2Es3-eu-west-1.2Eamazonaws.2Ecom.2Fprogram.2Fef03abc6b4caa395.2Ejpg/630x355/quality/80/documentaire.jpg",
-        color:"#159f49"
+    'Documentaires': {
+        link: "bg-[url(https://www.programme-tv.net/imgre/fit/https.3A.2F.2Fprd2-tel-epg-img.2Es3-eu-west-1.2Eamazonaws.2Ecom.2Fprogram.2Fef03abc6b4caa395.2Ejpg/630x355/quality/80/documentaire.jpg)]",
+        from: "from-[#159f49]",
+        hoverFrom: "hover:from-[#159f49AA]",
+        to: "to-[#159f4920]"
     },
-    'Drames':{
-        link:"https://www.netflix-news.com/wp-content/uploads/2019/11/the-revenant-1200x720.jpg",
-        color:"#c82322"
+    'Drames': {
+        link: "bg-[url(https://www.netflix-news.com/wp-content/uploads/2019/11/the-revenant-1200x720.jpg)]",
+        from: "from-[#c82322]",
+        hoverFrom: "hover:from-[#c82322AA]",
+        to: "to-[#c8232220]"
     },
-    'Fantastique':{
-        link:"https://www.babelio.com/users/liste_Selection-de-livres-FANTASTIQUES_4696.jpeg",
-        color:"#4e46e2"
+    'Fantastique': {
+        link: "bg-[url(https://www.babelio.com/users/liste_Selection-de-livres-FANTASTIQUES_4696.jpeg)]",
+        from: "from-[#4e46e2]",
+        hoverFrom: "hover:from-[#4e46e2AA]",
+        to: "to-[#4e46e220]"
     },
-    'Français':{
-        link:"https://storage.googleapis.com/images.frenchmorning.com/2019/02/174-cinemovies-b5c-2e3-1456efa8f483970aedccacaaf7-movies-27793-10.jpg",
-        color:"#2662e7"
+    'Français': {
+        link: "bg-[url(https://storage.googleapis.com/images.frenchmorning.com/2019/02/174-cinemovies-b5c-2e3-1456efa8f483970aedccacaaf7-movies-27793-10.jpg)]",
+        from: "from-[#2662e7]",
+        hoverFrom: "hover:from-[#2662e7AA]",
+        to: "to-[#2662e720]"
     },
-    'Horreur':{
-        link:"https://fr.web.img6.acsta.net/newsv7/20/06/11/18/06/5028748.jpg",
-        color:"#65a411"
+    'Horreur': {
+        link: "bg-[url(https://fr.web.img6.acsta.net/newsv7/20/06/11/18/06/5028748.jpg)]",
+        from: "from-[#65a411]",
+        hoverFrom: "hover:from-[#65a411AA]",
+        to: "to-[#65a41120]"
     },
-    'Indépendants':{
-        link:"https://www.trigon-film.org/fr/movies/Los_Lobos/photos/large/lobos_08.jpg",
-        color:"#7035d6"
+    'Indépendants': {
+        link: "bg-[url(https://www.trigon-film.org/fr/movies/Los_Lobos/photos/large/lobos_08.jpg)]",
+        from: "from-[#7035d6]",
+        hoverFrom: "hover:from-[#7035d6AA]",
+        to: "to-[#7035d620]"
     },
-    'International':{
-        link:"http://www.marlasmovies.com/wp-content/uploads/2019/03/lupita.jpg",
-        color:"#da2976"
+    'International': {
+        link: "bg-[url(http://www.marlasmovies.com/wp-content/uploads/2019/03/lupita.jpg)]",
+        from: "from-[#da2976]",
+        hoverFrom: "hover:from-[#da2976AA]",
+        to: "to-[#da297620]"
     },
-    'Jeunesse et famille':{
-        link:"https://cdn.radiofrance.fr/s3/cruiser-production/2020/11/963f9cba-6909-490b-b1d1-f8c0fad94090/870x489_toy-story-4.jpg",
-        color:"#d47916"
+    'Jeunesse et famille': {
+        link: "bg-[url(https://cdn.radiofrance.fr/s3/cruiser-production/2020/11/963f9cba-6909-490b-b1d1-f8c0fad94090/870x489_toy-story-4.jpg)]",
+        from: "from-[#d47916]",
+        hoverFrom: "hover:from-[#d47916AA]",
+        to: "to-[#d4791620]"
     },
-    'Comédies musicales':{
-        link:"http://www.musicalavenue.fr/wp-content/uploads/Hamilton1OK.jpg",
-        color:"#068faf"
+    'Comédies musicales': {
+        link: "bg-[url(http://www.musicalavenue.fr/wp-content/uploads/Hamilton1OK.jpg)]",
+        from: "from-[#068faf]",
+        hoverFrom: "hover:from-[#068fafAA]",
+        to: "to-[#068faf20]"
     },
-    'Policier':{
-        link:"https://resize.programme-television.ladmedia.fr/rcrop/690,388/img/var/imports/agtv/5/4/3/2164492345_169.jpg",
-        color:"#d92976"
+    'Policier': {
+        link: "bg-[url(https://resize.programme-television.ladmedia.fr/rcrop/690,388/img/var/imports/agtv/5/4/3/2164492345_169.jpg)]",
+        from: "from-[#d92976]",
+        hoverFrom: "hover:from-[#d92976AA]",
+        to: "to-[#d9297620]"
     },
-    'Primés':{
-        link:"https://media.vanityfair.fr/photos/60d3716fdb141fd0eb5b651a/master/pass/vf_green_book_controverses_9306.jpeg",
-        color:"#e6560e"
+    'Primés': {
+        link: "bg-[url(https://media.vanityfair.fr/photos/60d3716fdb141fd0eb5b651a/master/pass/vf_green_book_controverses_9306.jpeg)]",
+        from: "from-[#e6560e]",
+        hoverFrom: "hover:from-[#e6560eAA]",
+        to: "to-[#e6560e20]"
     },
-    'Romance':{
-        link:"https://image.jimcdn.com/app/cms/image/transf/dimension=755x10000:format=jpg/path/s63ccf77ce0e97436/image/iac863cc257d723b3/version/1433603709/image.jpg",
-        color:"#1ba14a"
+    'Romance': {
+        link: "bg-[url(https://image.jimcdn.com/app/cms/image/transf/dimension=755x10000:format=jpg/path/s63ccf77ce0e97436/image/iac863cc257d723b3/version/1433603709/image.jpg)]",
+        from: "from-[#1ba14a]",
+        hoverFrom: "hover:from-[#1ba14aAA]",
+        to: "to-[#1ba14a20]"
     },
-    'SF':{
-        link:"https://geekalition.com/wp-content/uploads/2021/11/outlier-finch-and-ghostbuster-afterlife.jpg",
-        color:"#9133e7"
+    'SF': {
+        link: "bg-[url(https://geekalition.com/wp-content/uploads/2021/11/outlier-finch-and-ghostbuster-afterlife.jpg)]",
+        from: "from-[#9133e7]",
+        hoverFrom: "hover:from-[#9133e7AA]",
+        to: "to-[#9133e720]"
     },
-    'Thriller':{
-        link:"https://images.bfmtv.com/FUXg6jNrGGmJAMTZRcZHg8WX02A=/4x3:996x561/640x0/images/-135645.jpg",
-        color:"#e75710"
+    'Thriller': {
+        link: "bg-[url(https://images.bfmtv.com/FUXg6jNrGGmJAMTZRcZHg8WX02A=/4x3:996x561/640x0/images/-135645.jpg)]",
+        from: "from-[#e75710]",
+        hoverFrom: "hover:from-[#e75710AA]",
+        to: "to-[#e7571020]"
     }
 }
 // const vid = '<iframe width="745" height="559" src="https://www.youtube.com/embed/GEwLnxOmW7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 // const vid = '<iframe id="video" class="absolute bg-cover bg-top w-full h-full w-full opacity-100 transition-all duration-500" src="https://www.youtube.com/embed/oVzVdvGIC7U?autoplay=0&controls=0&muted=1&cc_load_policy=0&disablekb=1&loop=1&modestbranding=0&rel=0&showinfo=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
 const corres = {
-    32:[128, 10, 16],
-    48:[192, 15, 25],
-    80:[320, 25, 40]
+    32: {
+        base:'h-32',
+        tall: {
+            h1:'h-[128px]',
+            h2:'h-[129px]',
+            h3:'h-[133px]',
+            mt:'mt-[-129px]'
+        },
+        short: {
+            h1:'h-[10rem]'
+        },
+        medium: {
+            pt:'pt-[16px]',
+            my:'my-[-16px]'
+        },
+    },
+    48: {
+        base:'h-40',
+        tall: {
+            h1:'h-[192px]',
+            h2:'h-[193px]',
+            h3:'h-[197px]',
+            mt:'mt-[-193px]'
+        },
+        short: {
+            h1:'h-[15rem]'
+        },
+        medium: {
+            pt:'pt-[25px]',
+            my:'my-[-25px]'
+        },
+    },
+    80: {
+        base:'h-80',
+        tall: {
+            h1:'h-[320px]',
+            h2:'h-[321px]',
+            h3:'h-[325px]',
+            mt:'mt-[-321px]'
+        },
+        short: {
+            h1:'h-[25rem]'
+        },
+        medium: {
+            pt:'pt-[40px]',
+            my:'my-[-40px]'
+        },
+    }
+
 }
 
 let main = document.getElementById('main')
 let genre = document.getElementById('genre')
 
-const scrollto = (el, of) => {
+const scrollto = (el, of ) => {
     let sect = document.getElementById(el)
-    
+
     sect.scroll({
-        left:  sect.scrollLeft + sect.offsetWidth * (of),
+        left: sect.scrollLeft + sect.offsetWidth * ( of ),
         behavior: 'smooth'
-      })
+    })
 }
 
 const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
@@ -204,15 +284,15 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
     for (let el of els) {
         let list = imgList
         let sect = document.createElement('section')
-        sect.classList.add('w-auto', 'overflow-x-scroll', 'no-scrollbar', 'group', 'h-['+corres[size][1]+'rem]', 'pt-['+corres[size][2]+'px]', 'my-[-'+corres[size][2]+'x]')
+        sect.classList.add('w-auto', 'overflow-x-scroll', 'no-scrollbar', 'group', corres[size].short.h1, corres[size].medium.pt, corres[size].medium.my)
         sect.id = el;
-        
+
         let h1 = document.createElement('h1')
         h1.innerHTML = el
         h1.classList.add('font-bold', 'ml-12', 'text-2xl', 'pt-5')
 
         let caroussel = document.createElement('div')
-        caroussel.classList.add('flex', 'w-max', 'space-x-2', 'mx-10', "h-["+corres[size][0]+"px]")
+        caroussel.classList.add('flex', 'w-max', 'space-x-2', 'mx-10', corres[size].tall.h1)
 
         if (catImportant) {
             list = list[el]
@@ -230,7 +310,7 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
         for (let i = 0; i < 15 && list.length !== 0; i++) {
 
             let img = document.createElement('img')
-            img.classList.add("rounded-md", 'cursor-pointer', "h-" + size)
+            img.classList.add("rounded-md", 'cursor-pointer', corres[size].base)
 
             let random = Math.floor(Math.random() * (list.length))
             img.src = list[random]
@@ -244,31 +324,31 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
             a.classList.add('transition-all', 'delay-1000')
             if (hasNumber) {
                 let number = document.createElement('div')
-                number.classList.add('h-' + size, 'ml-10')
+                number.classList.add(corres[size].base, 'ml-10')
                 number.innerHTML = numberList[i]
                 a.appendChild(number)
                 a.classList.add('flex')
             }
 
-            
-            
-            
+
+
+
             a.appendChild(img)
-            
-            
+
+
             if (size === 32) {
                 let video = document.createElement('div')
-                video.classList.add('w-[228px]', "h-["+(corres[size][0]+1)+"px]", 'mt-[-'+(corres[size][0]+1)+'px]', 'ml-[-1px]', 'overflow-hidden', 'opacity-0', "rounded-md", 'transition-all', 'duration-500', 'delay-1000', "cursor-pointer")
-    
+                video.classList.add('w-[228px]', corres[size].tall.h2, corres[size].tall.mt, 'ml-[-1px]', 'overflow-hidden', 'opacity-0', "rounded-md", 'transition-all', 'duration-500', 'delay-1000', "cursor-pointer")
+
                 let vid = document.createElement('video')
-                vid.classList.add('relative', 'object-cover', 'w-full', "h-["+(corres[size][0]+5)+"px]", 'opacity-100', 'transition-all', 'duration-500', 'delay-1000', "rounded-md")
+                vid.classList.add('relative', 'object-cover', 'w-full', corres[size].tall.h3, 'opacity-100', 'transition-all', 'duration-500', 'delay-1000', "rounded-md")
                 vid.muted = true
                 vid.loop = true
-                vid.src = i%2 ? "./assets/vid/Peaky Blinders - Season 1 _ Trailer.mp4" : "./assets/vid/Drôle _ Bande-annonce officielle VF _ Netflix France.mp4"
-    
+                vid.src = i % 2 ? "./assets/vid/Peaky Blinders - Season 1 _ Trailer.mp4" : "./assets/vid/Drôle _ Bande-annonce officielle VF _ Netflix France.mp4"
+
                 video.appendChild(vid)
-                
-                
+
+
                 a.onmouseover = () => {
                     a.classList.add('scale-125')
                     video.classList.add('opacity-100')
@@ -277,7 +357,7 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
                         a.classList.add('z-10')
                     }, 1000)
                 }
-                
+
                 a.onmouseout = () => {
                     a.classList.remove('scale-125')
                     video.classList.remove('opacity-100')
@@ -291,7 +371,7 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
                 a.onmouseover = () => {
                     a.classList.add('scale-125')
                 }
-                
+
                 a.onmouseout = () => {
                     a.classList.remove('scale-125')
                 }
@@ -302,14 +382,14 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
 
         const leftButton = document.createElement('button')
         leftButton.onclick = () => scrollto(el, -1)
-        leftButton.classList.add("absolute", 'z-[10]', "group-hover:opacity-100", "opacity-0", "transition-all", "duration-300", "bg-gradient-to-r", "from-[#141414]", "to-[rgb(0,0,0,0)]", "h-["+corres[size][0]+"px]", "w-24", "text-3xl")
+        leftButton.classList.add("absolute", 'z-[10]', "group-hover:opacity-100", "opacity-0", "transition-all", "duration-300", "bg-gradient-to-r", "from-[#141414]", "to-[rgb(0,0,0,0)]", corres[size].tall.h1, "w-24", "text-3xl")
         const leftAngle = document.createElement('i')
         leftAngle.classList.add("fa-solid", "fa-angle-left")
         leftButton.appendChild(leftAngle)
-        
+
         const rightButton = document.createElement('button')
         rightButton.onclick = () => scrollto(el, 1)
-        rightButton.classList.add("absolute", 'z-[10]', "group-hover:opacity-100", "opacity-0", "transition-all", "duration-300", "bg-gradient-to-l", "from-[#141414]", "to-[rgb(0,0,0,0)]", "right-0", "h-["+corres[size][0]+"px]", "w-24", "text-3xl")
+        rightButton.classList.add("absolute", 'z-[10]', "group-hover:opacity-100", "opacity-0", "transition-all", "duration-300", "bg-gradient-to-l", "from-[#141414]", "to-[rgb(0,0,0,0)]", "right-0", corres[size].tall.h1, "w-24", "text-3xl")
         const rightAngle = document.createElement('i')
         rightAngle.classList.add("fa-solid", "fa-angle-right")
         rightButton.appendChild(rightAngle)
@@ -329,28 +409,28 @@ const writeCarr = (els, imgList, size, hasNumber, catImportant, before) => {
 const writeCatList = (before) => {
     let sect = document.createElement('section')
     sect.classList.add('grid', 'px-10', 'gap-4', 'grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]')
-    
+
     let h1 = document.createElement('h1')
     h1.innerHTML = 'Programme par genre'
     h1.classList.add('font-bold', 'ml-12', 'text-2xl', 'pt-5')
-    
-    
+
+
     for (let cat in catList) {
         let link = document.createElement('a')
         link.href = '#'
-        link.classList.add('text-xl', 'h-20', 'rounded-lg', 'overflow-hidden', 'bg-cover', 'bg-top', 'bg-[url("'+ catList[cat].link +'")]')
-        
+        link.classList.add('text-xl', 'h-20', 'rounded-lg', 'overflow-hidden', 'bg-cover', 'bg-top', catList[cat].link)
+
         let color = document.createElement('div')
-        color.classList.add('flex', 'items-center', 'pl-3', 'font-semibold', 'bg-cover', 'bg-top', 'w-full', 'h-full', 'bg-gradient-to-r', 'from-['+catList[cat].color+']', 'hover:from-['+catList[cat].color+'AA]', 'to-['+catList[cat].color+'20]', 'cursor-pointer', 'transition-all', 'hover:opacity-75')
-        
+        color.classList.add('flex', 'items-center', 'pl-3', 'font-semibold', 'bg-cover', 'bg-top', 'w-full', 'h-full', 'bg-gradient-to-r', catList[cat].from, catList[cat].hoverFrom, catList[cat].to, 'cursor-pointer', 'transition-all', 'hover:opacity-75')
+
         let label = document.createElement('div')
         label.innerHTML = cat
-        
+
         color.appendChild(label)
         link.appendChild(color)
         sect.appendChild(link)
     }
-    
+
     main.insertBefore(h1, before)
     main.insertBefore(sect, before)
 }
